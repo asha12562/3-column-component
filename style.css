@@ -1,0 +1,109 @@
+:root {
+    --bg-orange: hsl(31, 77%, 52%);
+    --bg-cyan: hsl(184, 100%, 22%);
+    --bg-dark-cyan: hsl(179, 100%, 13%);
+    --fc-white: hsla(0, 0%, 100%, 0.75);
+    --accent-white: hsl(0, 0%, 95%);
+
+    --ff-headers: 'Big Shoulders Display', cursive;
+    --ff-paragraphs: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: var(--ff-paragraphs);
+}
+
+.container {
+    margin: 5rem 0 5rem 0;
+    max-width: 22rem;
+}
+
+.card {
+    padding: 4rem;
+}
+
+.icon {
+    margin-bottom: 2rem;
+}
+
+.header {
+    color: var(--accent-white);
+    font-family: var(--ff-headers);
+    font-weight: 400;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+
+.info-text {
+    margin: 2rem 0 2rem 0;
+    color: var(--fc-white);
+    line-height: 1.5rem;
+    font-size: 0.9375rem;
+}
+
+.button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.sedan {
+    background-color: var(--bg-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.sedan button {
+    background-color: var(--accent-white);
+    color: var(--bg-orange);
+}
+
+.suv {
+    background-color: var(--bg-cyan);
+}
+
+.suv button {
+    background-color: var(--accent-white);
+    color: var(--bg-cyan);
+}
+
+.luxury {
+    background-color: var(--bg-dark-cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.luxury button {
+    background-color: var(--accent-white);
+    color: var(--bg-dark-cyan);
+}
+
+@media (min-width: 415px) {
+    .container {
+        max-width: 64rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .info-text {
+        margin: 2rem 0 6rem 0;
+    }
+
+    .sedan {
+        border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .luxury {
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+}
